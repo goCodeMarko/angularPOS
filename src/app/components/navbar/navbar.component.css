@@ -1,0 +1,23 @@
+.nav-link {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: Brush Script MT;
+  text-transform: uppercase;
+  font-size: larger;
+  width: 100%;
+  margin-left: 0.2em;
+  color: white;
+  border-top: solid 2px gold;
+  border-bottom: solid 2px gold;
+}
+
+.nav {
+  padding-bottom: 5px;
+}
+
+a {
+  width: 100%;
+}

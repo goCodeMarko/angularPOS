@@ -1,0 +1,145 @@
+{
+  "products": [{
+      "prodName": "Cookies and Cream",
+      "qty": 26,
+      "cost": 100,
+      "price": 152,
+      "category": "food"
+    },
+    {
+      "prodName": "French Vanilla",
+      "qty": 42,
+      "cost": 150,
+      "price": 180,
+      "category": "food"
+    },
+    {
+      "prodName": "Chocolate Chip",
+      "qty": 6,
+      "cost": 150,
+      "price": 160,
+      "category": "food"
+    },
+    {
+      "prodName": "Chicken Wing",
+      "qty": 42,
+      "cost": 140,
+      "price": 189,
+      "category": "food"
+    },
+    {
+      "prodName": "Indian Currys",
+      "qty": 42,
+      "cost": 100,
+      "price": 120,
+      "category": "food"
+    },
+    {
+      "prodName": "Mint Chocolate Chip",
+      "qty": 12,
+      "cost": 120,
+      "price": 135,
+      "category": "food"
+    },
+    {
+      "prodName": "Peanut Butter Cup",
+      "qty": 19,
+      "cost": 130,
+      "price": 144,
+      "category": "food"
+    },
+    {
+      "prodName": "Rocky Road",
+      "qty": 29,
+      "cost": 135,
+      "price": 170,
+      "category": "food"
+    },
+    {
+      "prodName": "Caramel Ice Cream",
+      "qty": 29,
+      "cost": 190,
+      "price": 210,
+      "category": "food"
+    },
+    {
+      "prodName": "Mint Oreo Cookie",
+      "qty": 14,
+      "cost": 150,
+      "price": 180,
+      "category": "food"
+    },
+    {
+      "prodName": "Rainbow Sherbet",
+      "qty": 17,
+      "cost": 150,
+      "price": 190,
+      "category": "food"
+    },
+    {
+      "prodName": "Moose Tracks",
+      "qty": 25,
+      "cost": 180,
+      "price": 230,
+      "category": "food"
+    },
+    {
+      "prodName": "Strawberry Cheesecake",
+      "qty": 4,
+      "cost": 200,
+      "price": 250,
+      "category": "food"
+    },
+    {
+      "prodName": "Red Bull",
+      "qty": 29,
+      "cost": 48,
+      "price": 89,
+      "category": "drinks"
+    },
+    {
+      "prodName": "Coca-Cola 12",
+      "qty": 32,
+      "cost": 12,
+      "price": 20,
+      "category": "drinks"
+    },
+    {
+      "prodName": "Coca-Cola 7.5",
+      "qty": 51,
+      "cost": 10,
+      "price": 15,
+      "category": "drinks"
+    },
+    {
+      "prodName": "Pepsi 12",
+      "qty": 4,
+      "cost": 10,
+      "price": 20,
+      "category": "drinks"
+    },
+    {
+      "prodName": "Pepsi 7.5",
+      "qty": 21,
+      "cost": 9,
+      "price": 15,
+      "category": "drinks"
+    },
+    {
+      "prodName": "Tropicana",
+      "qty": 18,
+      "cost": 25,
+      "price": 35,
+      "category": "drinks"
+    },
+    {
+      "prodName": "Nescafé",
+      "qty": 68,
+      "cost": 10,
+      "price": 15,
+      "category": "drinks"
+    }
+
+  ]
+
+}

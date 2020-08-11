@@ -1,0 +1,17 @@
+<div class="product-container">
+  <!-- Looping all the data from filteredProducts array -->
+  <div *ngFor="let product of filteredProducts" (click)="addToCart({id: product._id,prodName: product.prodName,cost: product.cost, price: product.price, onHand:
+    product.qty})">
+    <div style="text-align: center;">
+      <strong>{{product.prodName}}</strong>
+      <br>
+      <div class="product-info">
+        {{voidItem()}}
+        <p for=""> {{product.price | currency: '‎₱'}}</p>
+        <p for="">Qty: {{product.qty}}</p>
+        <!-- <small for=""> {{product.dateCreated | date : 'MMMM d, y h:mm a'}} </small> -->
+      </div>
+    </div>
+  </div>
+  <!-- End -->
+</div>

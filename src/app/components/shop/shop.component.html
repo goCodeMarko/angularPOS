@@ -1,0 +1,111 @@
+<div style="margin: 1em;">
+  <div class="row">
+    <div class="col-lg-8">
+      <app-products (addToCartEvent)="cart= $event" [parentData]="itemVoid" [cart]="cart">
+      </app-products>
+    </div>
+    <div class="col-lg-4">
+      <div class="cart">
+
+        <!-- TABLE -->
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" style="width:40%;">ITEM</th>
+                <th scope="col">PRICE</th>
+                <th scope="col">QTY</th>
+                <th scope="col">SUBTOTAL</th>
+                <th scope="col" style="width:10%;"></th>
+              </tr>
+            </thead>
+            <tbody style="font-weight: bold;font-size: 15px;">
+              <tr *ngFor="let items of cart; let i = index">
+                <td>{{items.prodName}}</td>
+                <td>{{items.price | currency: '‎₱'}}</td>
+                <td>{{items.qty}}</td>
+                <td>{{items.subTotal | currency : '‎₱'}}</td>
+                <td><span class="fa fa-window-close fa-2x text-dark" style="cursor: pointer;"
+                    (click)="remove(i, items.id)" data-toggle="tooltip" data-placement="top" title="Remove Item"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="result">
+
+          <!-- CLEAR LIST BUTTON -->
+          <div style="margin-right: 1em;">
+            <button class="btn btn-outline-dark btn-block btn-lg" data-toggle="tooltip" data-placement="top"
+              title="Clear List" (click)="removeAll(cart)" *ngIf="cart.length > 0"><span
+                class="fa fa-trash-alt fa-lg"></span></button>
+
+            <hr>
+            {{calculate()}}
+
+            <!-- SENIOR CITIZEN / PWD RADIO BUTTON -->
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" value="regular" name="rbtn" (click)="rbtnChange($event.target.value)" checked>
+                Regular
+              </label>
+              <label class=" btn btn-secondary">
+                <input type="radio" value="sc_pwd" name="rbtn" (click)="rbtnChange($event.target.value)"> Senior
+                Citizen / PWD
+              </label>
+            </div>
+
+            <!-- SUB TOTAL -->
+            <div class="row">
+              <div class="col-sm-6">
+                <label>VATable Sales:</label>
+              </div>
+              <div class="col-sm-6" style="text-align:right;font-size: 20px;">
+                <b>{{getSubtotal() | currency : '‎₱'}}</b>
+              </div>
+            </div>
+
+            <!-- VAT -->
+            <div class="row">
+              <div class="col-sm-6">
+                <label>VAT Amount 12%:</label>
+              </div>
+              <div class="col-sm-6" style="text-align:right;font-size: 20px;">
+                <b>{{getChargeTax() | currency : '‎₱'}}</b>
+              </div>
+            </div>
+
+            <!-- DISCOUNT -->
+            <div class="row">
+              <div class="col-sm-6">
+                <label>Discount 20%:</label>
+              </div>
+              <div class="col-sm-6" style="text-align:right;font-size: 20px;">
+                <b>{{getDiscount() | currency : '‎₱'}}</b>
+              </div>
+            </div>
+
+            <!-- TOTAL -->
+            <div class="row">
+              <div class="col-sm-6">
+                <label>Grand Total:</label>
+              </div>
+              <div class="col-sm-6" style="text-align:right;font-size: 20px;">
+                <b>{{getGrandTotal() | currency : '‎₱'}}</b>
+              </div>
+            </div>
+
+            <!-- CHECKOUT BUTTON -->
+            <button class="btn btn-dark btn-block btn-lg" style="margin-top:1em;" data-toggle="tooltip"
+              data-placement="top" title="Checkout"
+              (click)="checkOut(cart, getSubtotal(), getChargeTax(), getDiscount(), getGrandTotal())"
+              *ngIf="cart.length"><span class="fa fa-shopping-cart fa-lg"></span></button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
