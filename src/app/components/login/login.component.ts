@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
 
         this._router.navigate(['/shop/products']);
 
-        this._flashMessages.show(`<span class="fa fa-globe fa-2x"></span>&nbsp&nbsp${this.fullname} is now online.`, {
+        this._flashMessages.show(`<span class="fa fa-grin-wink fa-2x"></span>&nbsp&nbsp${this.fullname} is now online.`, {
           cssClass: 'alert-success',
           timeout: 3000
         })

@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit {
       }
     }
 
-    this._flashMessages.show(`<span class= "fa fa-power-off fa-2x"> </span>&nbsp&nbsp${title} ${this.fullName} is now offline.`, {
+    this._flashMessages.show(`<span class= "fa fa-grin-beam-sweat fa-2x"> </span>&nbsp&nbsp${title} ${this.fullName} is now offline.`, {
       cssClass: 'alert-danger',
       timeout: 3000
     })

@@ -1,4 +1,35 @@
 <div class="table-container">
+  <div class="filter-container">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+        </div>
+        <div class="col-4">
+          <input type="datetime-local" [(ngModel)]="startDate" class="form-control form-control-lg" (input)="filter()">
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <div class="input-group-prepend" style="height: 2.95em;" *ngIf="filterBy == 'cost' || filterBy == 'price'">
+              <span class="input-group-text" style="background-color: #343a40;color:white;
+              width: 3em;">‎₱</span>
+            </div>
+            <input type="text" class="form-control form-control-lg" style="height: 2.4em;" [(ngModel)]="filterValue"
+              (input)="filter()">
+            <div class="input-group-append">
+              <select style="border-top-left-radius: 0px !important;border-bottom-left-radius: 0px
+                !important;width:7em;height: 2.39em;" class="custom-select custom-select-lg" id="inputGroupSelect03"
+                [(ngModel)]="filterBy" (change)="filter()">
+                <option value="product">Product</option>
+                <option value="id">ID</option>
+                <option value="cost">Cost</option>
+                <option value="price">Price</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-lg-12">
       <table class="table text-center">
@@ -37,4 +68,3 @@
       </table>
     </div>
   </div>
-</div>

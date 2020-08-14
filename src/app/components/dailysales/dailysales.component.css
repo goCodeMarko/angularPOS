@@ -1,3 +1,8 @@
 .table-container {
   margin-top: 5em;
 }
+
+.filter-container {
+  background-color: #343a40;
+  padding: 10px;
+}
